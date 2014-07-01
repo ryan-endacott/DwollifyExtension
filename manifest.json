@@ -28,7 +28,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://dwollify.herokuapp.com/*"
       ],
       "js": [
         "src/inject/inject.js"
