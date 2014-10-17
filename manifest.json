@@ -31,6 +31,7 @@
         "https://dwollify.herokuapp.com/*"
       ],
       "js": [
+        "src/third-party/jquery-2.1.1.min.js",
         "src/inject/inject.js"
       ]
     }
