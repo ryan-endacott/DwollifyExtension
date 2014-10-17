@@ -1,13 +1,10 @@
-chrome.extension.sendMessage({}, function(response) {
-	var readyStateCheckInterval = setInterval(function() {
-	if (document.readyState === "complete") {
-		clearInterval(readyStateCheckInterval);
+$(document).ready(grab_credentials);
+$(document).on('page:load', grab_credentials);
 
-		// ----------------------------------------------------------
-		// This part of the script triggers when page is done loading
-		console.log("Hello. This message was sent from scripts/inject.js");
-		// ----------------------------------------------------------
+function grab_credentials() {
+  alert(get_page());
+}
 
-	}
-	}, 10);
-});
+function get_page() {
+  return window.location.pathname.split('/').pop();
+}
