@@ -1,12 +1,10 @@
-<!doctype html>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Dwollify</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
@@ -30,6 +28,26 @@
         margin-bottom: 10px;
       }
     </style>
+
+    <script src="../third-party/jquery-2.1.1.min.js">
+    </script>
+
+    <script>
+      $(document).ready(hook_send_payment_button_up)
+
+      function hook_send_payment_button_up() {
+        $('#send_payment').click(function() {
+          chrome.runtime.sendMessage({
+            route: 'send_payment',
+            email: $('#email').val(),
+            amount: $('#amount').val(),
+            pin: $('#pin').val()
+          });
+        });
+      }
+
+    </script>
+
   </head>
   <body>
     <div class="container">
@@ -66,7 +84,7 @@
       </div>
 
       <div class="row">
-        <button type="button" class="btn btn-success btn-lg btn-block">Send Money!</button>
+        <button id="send_payment" type="button" class="btn btn-success btn-lg btn-block">Send Money!</button>
       </div>
 
     </div>
