@@ -7,6 +7,10 @@ var handlers = {
       uid: request.uid,
       api_token: request.api_token
     });
+  },
+
+  send_payment: function(request, sender, sendResponse) {
+    sendResponse({message: 'no', success: true});
   }
 
 };

@@ -25,28 +25,17 @@
       .container {
         margin-left: 7%;
         margin-right: 7%;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
+      }
+
+      #alert_message {
+        display: none;
       }
     </style>
 
-    <script src="../third-party/jquery-2.1.1.min.js">
-    </script>
+    <script src="../third-party/jquery-2.1.1.min.js"></script>
 
-    <script>
-      $(document).ready(hook_send_payment_button_up)
-
-      function hook_send_payment_button_up() {
-        $('#send_payment').click(function() {
-          chrome.runtime.sendMessage({
-            route: 'send_payment',
-            email: $('#email').val(),
-            amount: $('#amount').val(),
-            pin: $('#pin').val()
-          });
-        });
-      }
-
-    </script>
+    <script src="browser_action.js"></script>
 
   </head>
   <body>
@@ -85,6 +74,13 @@
 
       <div class="row">
         <button id="send_payment" type="button" class="btn btn-success btn-lg btn-block">Send Money!</button>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="alert" id="alert_message">
+        </div>
       </div>
 
     </div>
