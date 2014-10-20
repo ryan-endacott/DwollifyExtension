@@ -23,7 +23,8 @@
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
-    "https://dwollify.herokuapp.com/*"
+    "https://dwollify.herokuapp.com/*",
+    "storage"
   ],
   "content_scripts": [
     {
