@@ -1,16 +1,76 @@
 <!doctype html>
-<style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	h1 {
-		font-size: 2em;
-	}
-</style>
 
-<div id="mainPopup">
-  <h1>Welcome to Dwollify!</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      body {
+        width: 300px;
+        height: 300px;
+      }
+
+      .container {
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dwollify</h1>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control" id="amount">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="form-group">
+          <label for="pin">PIN</label>
+          <input type="password" class="form-control" id="pin">
+        </div>
+      </div>
+
+      <div class="row">
+        <button type="button" class="btn btn-success btn-lg btn-block">Send Money!</button>
+      </div>
+
+    </div>
+  </body>
+</html>
+
+
