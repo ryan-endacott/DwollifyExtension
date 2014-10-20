@@ -10,7 +10,22 @@ var handlers = {
   },
 
   send_payment: function(request, sender, sendResponse) {
-    sendResponse({message: 'no', success: true});
+
+    chrome.storage.sync.get(['uid', 'api_token'], function(data) {
+      $.post('https://dwollify.herokuapp.com/send_payment', {
+        uid: data.uid,
+        api_token: data.api_token,
+        email: request.email,
+        amount: request.amount,
+        pin: request.pin
+      }).done(function() {
+        sendResponse({message: 'Successfully sent!', success: true});
+      }).fail(function(data) {
+        sendResponse({message: data.responseJSON.error, success: false});
+      });
+
+    });
+
   }
 
 };
