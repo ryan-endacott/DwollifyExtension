@@ -10,6 +10,11 @@ function grab_credentials() {
       api_token: api_token,
       uid: uid
     });
+    if (uid && api_token) {
+      alert('Successfully got credentials!');
+    } else {
+      alert('Error loading credentials!');
+    }
   }
 }
 
