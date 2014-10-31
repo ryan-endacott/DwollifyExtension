@@ -13,8 +13,13 @@ $(document).ready(function() {
 function hook_up_links() {
   $('a').click(function(event) {
     var clicked_element = $(event.target);
-    var url = clicked_element.parent('a')[0].href;
-    chrome.tabs.create({url: url});
+    var url = clicked_element[0].href;
+    if (!url) {
+      var url = clicked_element.parent('a')[0].href;
+    }
+    if (url) {
+      chrome.tabs.create({url: url});
+    }
   })
 }
 
