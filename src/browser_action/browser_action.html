@@ -31,6 +31,15 @@
       #alert_message {
         display: none;
       }
+
+      #payment_form {
+        display: none;
+      }
+
+      #login_form {
+        display: none;
+      }
+
     </style>
 
     <script src="../third-party/jquery-2.1.1.min.js"></script>
@@ -43,7 +52,22 @@
       <h1>Dwollify</h1>
     </div>
 
-    <div class="container">
+    <div id="login_form" class="container">
+
+      <div class="row text-center">
+        <p>It looks like you haven't logged in yet. Visit <a href="https://dwollify.herokuapp.com">Dwollify</a> to sign in!</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <a href="https://dwollify.herokuapp.com">
+            <button class="btn btn-primary">Sign in</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="payment_form" class="container">
 
       <div class="row">
         <div class="form-group">

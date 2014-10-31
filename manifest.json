@@ -25,7 +25,8 @@
   },
   "permissions": [
     "https://dwollify.herokuapp.com/*",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "content_scripts": [
     {
