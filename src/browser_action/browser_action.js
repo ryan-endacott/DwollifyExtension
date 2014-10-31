@@ -31,6 +31,11 @@ function hook_send_payment_button_up() {
   var output_alert = $('#alert_message');
 
   $('#send_payment').click(function() {
+
+    var spinner = new Spinner().spin();
+    $('#payment_form').append(spinner.el);
+    $('#dimmer').show();
+
     chrome.runtime.sendMessage({
       route: 'send_payment',
       email: $('#email').val(),
@@ -48,6 +53,9 @@ function hook_send_payment_button_up() {
       }
       output_alert.text(response.message);
       output_alert.show();
+      spinner.stop();
+      $('#dimmer').hide();
+
     });
   });
 }
