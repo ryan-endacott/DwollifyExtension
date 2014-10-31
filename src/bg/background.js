@@ -26,6 +26,8 @@ var handlers = {
 
     });
 
+    // Return true to keep connection open to send a response.
+    return true;
   }
 
 };
@@ -34,7 +36,7 @@ var handlers = {
 
 chrome.extension.onMessage.addListener(
   function(request, sender, sendResponse) {
-    handlers[request.route](request, sender, sendResponse);
+    return handlers[request.route](request, sender, sendResponse);
   });
 
 
