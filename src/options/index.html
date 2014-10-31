@@ -1,9 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <title>Dwollify Options</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+
+  <style>
+
+    #login_form {
+      display: none;
+    }
+
+    #logout_form {
+      display: none;
+    }
+
+  </style>
+
+  <script src="../third-party/jquery-2.1.1.min.js"></script>
+
+  <script src="options.js"></script>
+
 </head>
 <body>
+  <div class="container">
+    <h1>Dwollify</h1>
+  </div>
+
+  <div id="login_form" class="container">
+
+    <div class="row">
+      <p>It looks like you haven't logged in yet. Visit <a href="https://dwollify.herokuapp.com">Dwollify</a> to sign in!</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <a href="https://dwollify.herokuapp.com">
+          <button class="btn btn-primary">Sign in</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="logout_form" class="container">
+    <button id="logout_button" class="btn btn-primary">Sign out</button>
+  </div>
+
 
 </body>
 </html>
