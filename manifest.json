@@ -5,11 +5,10 @@
   "description": "The universal donate button of the internet!",
   "homepage_url": "https://dwollify.herokuapp.com",
   "icons": {
-    "16": "icons/dwollify16.png"
-    "48": "icons/dwollify48.png"
+    "16": "icons/dwollify16.png",
+    "48": "icons/dwollify48.png",
     "128": "icons/dwollify128.png"
   },
-  "default_locale": "en",
   "background": {
     "scripts": [
       "src/third-party/jquery-2.1.1.min.js",
