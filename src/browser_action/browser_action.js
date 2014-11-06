@@ -31,14 +31,15 @@ function show_login_form() {
 function hook_send_payment_button_up() {
 
   $('body').height(300);
-  $('#payment_form').show();
+  $('#payment_form_container').show();
 
   var output_alert = $('#alert_message');
 
-  $('#send_payment').click(function() {
+  $('#payment_form').submit(function() {
+    console.log('here');
 
     var spinner = new Spinner().spin();
-    $('#payment_form').append(spinner.el);
+    $('#payment_form_container').append(spinner.el);
     $('#dimmer').show();
 
     chrome.runtime.sendMessage({
@@ -62,6 +63,9 @@ function hook_send_payment_button_up() {
       $('#dimmer').hide();
 
     });
+
+    // Don't actually submit form.
+    return false;
   });
 }
 

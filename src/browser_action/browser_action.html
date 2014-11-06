@@ -24,7 +24,7 @@
         display: none;
       }
 
-      #payment_form {
+      #payment_form_container {
         display: none;
       }
 
@@ -72,38 +72,39 @@
       </div>
     </div>
 
-    <div id="payment_form" class="container">
+    <div id="payment_form_container" class="container">
+      <form id="payment_form">
 
-      <div class="row">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="text" class="form-control" id="email">
-        </div>
-      </div>
-
-
-
-      <div class="row">
-        <div class="form-group">
-          <label for="amount">Amount</label>
-          <div class="input-group">
-            <span class="input-group-addon">$</span>
-            <input type="text" class="form-control" id="amount">
+        <div class="row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email">
           </div>
         </div>
-      </div>
 
-
-      <div class="row">
-        <div class="form-group">
-          <label for="pin">PIN</label>
-          <input type="password" class="form-control" id="pin">
+        <div class="row">
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control" id="amount">
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <button id="send_payment" type="button" class="btn btn-success btn-lg btn-block">Send Money!</button>
-      </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pin">PIN</label>
+            <input type="password" class="form-control" id="pin">
+          </div>
+        </div>
+
+        <div class="row">
+          <input id="send_payment" type="submit" value="Send Money!" class="btn btn-success btn-lg btn-block">
+        </div>
+
+      </form>
 
       <br>
 
