@@ -1,6 +1,6 @@
 {
   "name": "Dwollify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "The universal donate button of the web, powered by Dwolla!",
   "homepage_url": "https://dwollify.herokuapp.com",
